@@ -1,2 +1,2 @@
 # LeetCode-Solutions
-LeetCode Solutions in C++ and C#
+LeetCode Solutions in Java
