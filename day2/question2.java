@@ -1,4 +1,3 @@
-package day2;
 public class question2 {
 
     /* Question 2
@@ -32,4 +31,31 @@ public class question2 {
         return 0;
     }
 
+
+    public int[] findElementSolution(int[][] matrix, int target) {
+        // Check for empty matrix
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            return null;
+        }
+        
+        int row = 0;
+        int col = matrix[0].length - 1;
+        
+        // Start from top-right corner and move left or down
+        while (row < matrix.length && col >= 0) {
+            if (matrix[row][col] == target) {
+                // Element found, return its position
+                return new int[] {row, col};
+            } else if (matrix[row][col] > target) {
+                // Current value is greater, so move left
+                col--;
+            } else {
+                // Current value is smaller, so move down
+                row++;
+            }
+        }
+        
+        // Element not found
+        return null;
+    }
 }

@@ -1,4 +1,3 @@
-package day2;
 public class question1 {
 
     //"aabcccccaaa" --> "a2b1c5a3"
